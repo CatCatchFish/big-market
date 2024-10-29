@@ -1,0 +1,140 @@
+24-10-28.16:54:09.645 [main            ] INFO  StrategyArmoryTest     - Starting StrategyArmoryTest using Java 1.8.0_281 on catlap with PID 4516 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-10-28.16:54:09.647 [main            ] INFO  StrategyArmoryTest     - The following 1 profile is active: "dev"
+24-10-28.16:54:11.004 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-28.16:54:11.010 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-28.16:54:11.052 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+24-10-28.16:54:12.985 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-28.16:54:13.788 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-28.16:54:13.814 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-28.16:54:17.274 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-28.16:54:17.430 [main            ] INFO  StrategyArmoryTest     - Started StrategyArmoryTest in 8.577 seconds (JVM running for 9.987)
+24-10-28.16:54:18.469 [main            ] INFO  HikariDataSource       - HikariPool-1 - Starting...
+24-10-28.16:54:19.540 [main            ] INFO  HikariDataSource       - HikariPool-1 - Start completed.
+24-10-28.16:54:19.906 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:54:19.916 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:54:19.925 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:54:19.974 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown initiated...
+24-10-28.16:54:20.005 [SpringApplicationShutdownHook] INFO  HikariDataSource       - HikariPool-1 - Shutdown completed.
+24-10-28.16:56:34.317 [main            ] INFO  StrategyArmoryTest     - Starting StrategyArmoryTest using Java 1.8.0_281 on catlap with PID 10000 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-10-28.16:56:34.318 [main            ] INFO  StrategyArmoryTest     - The following 1 profile is active: "dev"
+24-10-28.16:56:35.050 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-28.16:56:35.053 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-28.16:56:35.076 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-10-28.16:56:36.657 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-28.16:56:37.228 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-28.16:56:37.270 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-28.16:56:40.574 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-28.16:56:40.814 [main            ] INFO  StrategyArmoryTest     - Started StrategyArmoryTest in 6.959 seconds (JVM running for 7.826)
+24-10-28.16:56:42.172 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:56:42.184 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:56:42.193 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:58:52.727 [main            ] INFO  StrategyArmoryTest     - Starting StrategyArmoryTest using Java 1.8.0_281 on catlap with PID 6532 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-10-28.16:58:52.728 [main            ] INFO  StrategyArmoryTest     - The following 1 profile is active: "dev"
+24-10-28.16:58:53.481 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-28.16:58:53.484 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-28.16:58:53.505 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+24-10-28.16:58:55.059 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-28.16:58:55.611 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-28.16:58:55.643 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-28.16:58:59.024 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-28.16:58:59.154 [main            ] INFO  StrategyArmoryTest     - Started StrategyArmoryTest in 6.844 seconds (JVM running for 7.558)
+24-10-28.16:59:00.074 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.082 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.089 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.097 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.104 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.111 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.118 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.124 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.130 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.138 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.145 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.151 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.157 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.164 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.171 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：106，奖品ID
+24-10-28.16:59:00.177 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.184 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.190 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.196 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.203 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.209 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.216 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.226 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.236 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.243 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.250 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.255 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.262 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.268 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.273 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.279 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.284 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.291 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.297 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.303 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.309 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.316 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.321 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.329 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.334 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：106，奖品ID
+24-10-28.16:59:00.340 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.346 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.355 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.361 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.366 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.371 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.378 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.384 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：106，奖品ID
+24-10-28.16:59:00.389 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.393 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.398 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：106，奖品ID
+24-10-28.16:59:00.404 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.408 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.414 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.420 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.432 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.436 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.441 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.446 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.450 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.455 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.461 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.465 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：106，奖品ID
+24-10-28.16:59:00.471 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.475 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.480 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.484 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.489 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.495 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.501 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.509 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.516 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.526 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.531 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.537 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.541 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.546 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.551 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.555 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.560 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.564 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.568 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.573 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.577 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.581 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.589 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.595 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.602 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.608 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.615 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.621 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.628 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.639 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.647 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.652 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.657 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.661 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.666 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：102，奖品ID
+24-10-28.16:59:00.669 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID
+24-10-28.16:59:00.674 [main            ] INFO  StrategyArmoryTest     - 抽奖结果：101，奖品ID

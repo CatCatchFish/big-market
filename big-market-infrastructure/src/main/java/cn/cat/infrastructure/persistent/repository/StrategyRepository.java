@@ -1,9 +1,15 @@
 package cn.cat.infrastructure.persistent.repository;
 
 import cn.cat.domain.strategy.model.entity.StrategyAwardEntity;
+import cn.cat.domain.strategy.model.entity.StrategyEntity;
+import cn.cat.domain.strategy.model.entity.StrategyRuleEntity;
 import cn.cat.domain.strategy.repository.IStrategyRepository;
 import cn.cat.infrastructure.persistent.dao.IStrategyAwardDao;
+import cn.cat.infrastructure.persistent.dao.IStrategyDao;
+import cn.cat.infrastructure.persistent.dao.IStrategyRuleDao;
+import cn.cat.infrastructure.persistent.po.Strategy;
 import cn.cat.infrastructure.persistent.po.StrategyAward;
+import cn.cat.infrastructure.persistent.po.StrategyRule;
 import cn.cat.infrastructure.persistent.redis.IRedisService;
 import cn.cat.types.common.Constants;
 import org.springframework.stereotype.Repository;
@@ -17,6 +23,10 @@ import java.util.Map;
 public class StrategyRepository implements IStrategyRepository {
     @Resource
     private IStrategyAwardDao strategyAwardDao;
+    @Resource
+    private IStrategyDao strategyDao;
+    @Resource
+    private IStrategyRuleDao strategyRuleDao;
     @Resource
     private IRedisService redisService;
 
@@ -64,5 +74,38 @@ public class StrategyRepository implements IStrategyRepository {
     @Override
     public Integer getStrategyAwardAssemble(String key, Integer rateKey) {
         return redisService.getFromMap(Constants.RedisKey.STRATEGY_RATE_TABLE_KEY + key, rateKey);
+    }
+
+    @Override
+    public StrategyEntity queryStrategyEntityByStrategyId(Long strategyId) {
+        String key = Constants.RedisKey.STRATEGY_KEY + strategyId;
+        StrategyEntity strategyEntity = redisService.getValue(key);
+        if (null != strategyEntity) return strategyEntity;
+        Strategy strategy = strategyDao.queryStrategyByStrategyId(strategyId);
+        if (null == strategy) return null;
+        strategyEntity = StrategyEntity.builder()
+                .strategyId(strategy.getStrategyId())
+                .strategyDesc(strategy.getStrategyDesc())
+                .ruleModels(strategy.getRuleModels())
+                .build();
+        redisService.setValue(key, strategyEntity);
+        return strategyEntity;
+    }
+
+    @Override
+    public StrategyRuleEntity queryStrategyRule(Long strategyId, String ruleModel) {
+        StrategyRule strategyRuleReq = new StrategyRule();
+        strategyRuleReq.setStrategyId(strategyId);
+        strategyRuleReq.setRuleModel(ruleModel);
+        StrategyRule strategyRule = strategyRuleDao.queryStrategyRule(strategyRuleReq);
+        if (strategyRule == null) return null;
+        return StrategyRuleEntity.builder()
+                .strategyId(strategyRule.getStrategyId())
+                .awardId(strategyRule.getAwardId())
+                .ruleModel(strategyRule.getRuleModel())
+                .ruleDesc(strategyRule.getRuleDesc())
+                .ruleType(strategyRule.getRuleType())
+                .ruleValue(strategyRule.getRuleValue())
+                .build();
     }
 }
