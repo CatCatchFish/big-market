@@ -1,13 +1,15 @@
 package cn.cat.domain.strategy.service.raffle;
 
+import cn.cat.domain.strategy.service.AbstractRaffleStrategy;
 import cn.cat.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.cat.domain.strategy.model.entity.RuleActionEntity;
 import cn.cat.domain.strategy.model.entity.RuleMatterEntity;
 import cn.cat.domain.strategy.model.valobj.RuleLogicCheckTypeVO;
 import cn.cat.domain.strategy.repository.IStrategyRepository;
 import cn.cat.domain.strategy.service.armory.IStrategyDispatch;
-import cn.cat.domain.strategy.service.rule.ILogicFilter;
-import cn.cat.domain.strategy.service.rule.factory.DefaultLogicFactory;
+import cn.cat.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.cat.domain.strategy.service.rule.filter.ILogicFilter;
+import cn.cat.domain.strategy.service.rule.filter.factory.DefaultLogicFactory;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
@@ -24,9 +26,10 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy {
     @Resource
     private DefaultLogicFactory logicFactory;
 
-    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch) {
-        super(repository, strategyDispatch);
+    public DefaultRaffleStrategy(IStrategyRepository repository, IStrategyDispatch strategyDispatch, DefaultChainFactory defaultChainFactory) {
+        super(repository, strategyDispatch, defaultChainFactory);
     }
+
 
     @Override
     protected RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> doCheckRaffleBeforeLogic(RaffleFactorEntity raffleFactorEntity, String... logics) {
