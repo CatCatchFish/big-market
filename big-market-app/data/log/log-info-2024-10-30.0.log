@@ -1,0 +1,22 @@
+24-10-30.20:17:09.561 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_281 on catlap with PID 9316 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-10-30.20:17:09.562 [main            ] INFO  ApiTest                - The following 1 profile is active: "dev"
+24-10-30.20:17:11.033 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-30.20:17:11.037 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-30.20:17:11.074 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-10-30.20:17:13.081 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-30.20:17:13.575 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-30.20:17:13.619 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-30.20:17:16.716 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-30.20:17:16.852 [main            ] INFO  ApiTest                - Started ApiTest in 8.005 seconds (JVM running for 9.634)
+24-10-30.20:17:17.558 [main            ] INFO  ApiTest                - The minimum value greater than 15 is 20
+24-10-30.21:36:31.037 [main            ] INFO  ApiTest                - Starting ApiTest using Java 1.8.0_281 on catlap with PID 12284 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-10-30.21:36:31.039 [main            ] INFO  ApiTest                - The following 1 profile is active: "dev"
+24-10-30.21:36:32.420 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-10-30.21:36:32.424 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-10-30.21:36:32.462 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+24-10-30.21:36:34.443 [main            ] INFO  Version                - Redisson 3.23.4
+24-10-30.21:36:34.988 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-30.21:36:35.017 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-10-30.21:36:38.306 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-10-30.21:36:38.488 [main            ] INFO  ApiTest                - Started ApiTest in 8.286 seconds (JVM running for 9.839)
+24-10-30.21:36:39.448 [main            ] INFO  ApiTest                - The minimum value greater than 15 is 10

@@ -24,7 +24,7 @@ public class RuleWeightListLogicFilter implements ILogicFilter<RuleActionEntity.
     @Resource
     private IStrategyRepository repository;
     // 后续需要从数据库中查询用户积分值
-    private final Long userScore = 6500L;
+    private Long userScore = 6500L;
 
     @Override
     public RuleActionEntity<RuleActionEntity.RaffleBeforeEntity> filter(RuleMatterEntity ruleMatterEntity) {

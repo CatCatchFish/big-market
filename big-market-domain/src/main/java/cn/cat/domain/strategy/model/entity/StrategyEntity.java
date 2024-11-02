@@ -26,12 +26,13 @@ public class StrategyEntity {
     private String ruleModels;
 
     public String[] ruleModels() {
-        if (StringUtils.isEmpty(ruleModels)) return null;
+        if (StringUtils.isBlank(ruleModels)) return null;
         return ruleModels.split(Constants.SPLIT);
     }
 
     public String getRuleWeight() {
         String[] ruleModels = this.ruleModels();
+        if (ruleModels == null) return null;
         for (String ruleModel : ruleModels) {
             if ("rule_weight".equals(ruleModel)) return ruleModel;
         }
