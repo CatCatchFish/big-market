@@ -8,7 +8,6 @@ import cn.cat.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
 import cn.cat.domain.strategy.service.rule.filter.impl.RuleLockLogicFilter;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
