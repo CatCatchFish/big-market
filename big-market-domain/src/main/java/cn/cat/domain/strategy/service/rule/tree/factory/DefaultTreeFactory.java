@@ -22,6 +22,7 @@ public class DefaultTreeFactory {
     }
 
     public IDecisionTreeEngine openLogicTree(RuleTreeVO ruleTreeVO) {
+        // 装配决策树
         return new DecisionTreeEngine(loginTreeNodeMap, ruleTreeVO);
     }
 
@@ -34,7 +35,7 @@ public class DefaultTreeFactory {
     @NoArgsConstructor
     public static class TreeActionEntity {
         private RuleLogicCheckTypeVO ruleLogicCheckType;
-        private StrategyAwardData strategyAwardData;
+        private StrategyAwardVO strategyAwardVO;
     }
 
 
@@ -42,7 +43,7 @@ public class DefaultTreeFactory {
     @Builder
     @AllArgsConstructor
     @NoArgsConstructor
-    public static class StrategyAwardData {
+    public static class StrategyAwardVO {
         /**
          * 奖品ID 内部流转使用
          */

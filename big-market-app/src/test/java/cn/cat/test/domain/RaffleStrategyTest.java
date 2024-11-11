@@ -8,6 +8,7 @@ import cn.cat.domain.strategy.service.rule.chain.impl.RuleWeightLogicChain;
 import cn.cat.domain.strategy.service.rule.filter.impl.RuleLockLogicFilter;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Before;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,8 +34,7 @@ public class RaffleStrategyTest {
     //@Before
     public void setUp() {
         log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100001L));
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100002L));
-        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100003L));
+        log.info("测试结果：{}", strategyArmory.assembleLotteryStrategy(100006L));
 
         ReflectionTestUtils.setField(ruleWeightLogicChain, "userScore", 4500L);
         ReflectionTestUtils.setField(ruleLockLogicFilter, "userRaffleCount", 10L);
@@ -44,12 +44,12 @@ public class RaffleStrategyTest {
     public void test_performRaffle() {
         RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                 .userId("xiaofuge")
-                .strategyId(100001L)
+                .strategyId(100006L)
                 .build();
 
         //for (int i = 0; i < 10; i++) {
-            RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
-            log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
+        RaffleAwardEntity raffleAwardEntity = raffleStrategy.performRaffle(raffleFactorEntity);
+        log.info("测试结果：{}", JSON.toJSONString(raffleAwardEntity));
         //}
     }
 
@@ -67,7 +67,7 @@ public class RaffleStrategyTest {
     }
 
     @Test
-    public void test_raffle_center_rule_lock(){
+    public void test_raffle_center_rule_lock() {
         RaffleFactorEntity raffleFactorEntity = RaffleFactorEntity.builder()
                 .userId("xiaofuge")
                 .strategyId(100003L)
