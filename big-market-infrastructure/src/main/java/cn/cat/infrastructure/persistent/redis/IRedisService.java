@@ -240,4 +240,20 @@ public interface IRedisService {
      */
     <T> RBloomFilter<T> getBloomFilter(String key);
 
+    /**
+     * 原子性计数器
+     *
+     * @param key   键
+     * @param value 值
+     */
+    void setAtomicLong(String key, long value);
+
+    /**
+     * 原子性计数器
+     *
+     * @param key 键
+     */
+    Long getAtomicLong(String key);
+
+    Boolean setNx(String key);
 }
