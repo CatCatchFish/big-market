@@ -5,36 +5,43 @@ import lombok.Data;
 import java.util.Date;
 
 /**
- * 奖品信息
+ * 抽奖活动次数
  */
 @Data
-public class Award {
+public class RaffleActivityCount {
     /**
      * 自增ID
      */
     private Long id;
+
     /**
-     * 抽奖奖品ID - 内部流转使用
+     * 活动次数编号
      */
-    private Integer awardId;
+    private Long activityCountId;
+
     /**
-     * 奖品对接标识 - 每一个都是一个对应的发奖策略
+     * 总次数
      */
-    private String awardKey;
+    private Integer totalCount;
+
     /**
-     * 奖品配置信息
+     * 日次数
      */
-    private String awardConfig;
+    private Integer dayCount;
+
     /**
-     * 奖品内容描述
+     * 月次数
      */
-    private String awardDesc;
+    private Integer monthCount;
+
     /**
      * 创建时间
      */
     private Date createTime;
+
     /**
      * 更新时间
      */
     private Date updateTime;
+
 }
