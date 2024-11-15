@@ -4,7 +4,6 @@ import cn.cat.domain.strategy.model.entity.RaffleAwardEntity;
 import cn.cat.domain.strategy.model.entity.RaffleFactorEntity;
 import cn.cat.domain.strategy.model.entity.StrategyAwardEntity;
 import cn.cat.domain.strategy.repository.IStrategyRepository;
-import cn.cat.domain.strategy.service.armory.IStrategyDispatch;
 import cn.cat.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
 import cn.cat.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.cat.types.enums.ResponseCode;
@@ -17,7 +16,6 @@ import org.apache.commons.lang3.StringUtils;
 @AllArgsConstructor
 public abstract class AbstractRaffleStrategy implements IRaffleStrategy {
     protected IStrategyRepository repository;
-    protected IStrategyDispatch strategyDispatch;
     // 抽奖的责任链 -> 从抽奖的规则中，解耦出前置规则为责任链处理
     protected final DefaultChainFactory defaultChainFactory;
     protected final DefaultTreeFactory defaultTreeFactory;
