@@ -1,4 +1,4 @@
-package cn.cat.test.domain;
+package cn.cat.test.domain.strategy;
 
 import cn.cat.domain.strategy.service.armory.IStrategyArmory;
 import cn.cat.domain.strategy.service.armory.IStrategyDispatch;

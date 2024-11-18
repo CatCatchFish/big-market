@@ -8,13 +8,18 @@ public class Constants {
 
     public static class RedisPrefix {
         public static String STRATEGY = "strategy:";
-        public static String STRATEGY_ARMORY = "strategy_armory:";
-        public static String STRATEGY_RAFFLE = "strategy_raffle:";
-        public static String STRATEGY_RULE_TREE = "strategy_rule_tree:";
-        public static String STRATEGY_CONSUME_QUEUE = "strategy_consume_queue:";
+        public static String STRATEGY_ARMORY = "strategy:armory:";
+        public static String STRATEGY_RAFFLE = "strategy:raffle:";
+        public static String STRATEGY_RULE_TREE = "strategy:rule_tree:";
+        public static String STRATEGY_CONSUME_QUEUE = "strategy:consume_queue:";
+        public static String RAFFLE_ACTIVITY = "raffle_activity:";
+        public static String RAFFLE_ACTIVITY_ACCOUNT = "raffle_award:account:";
     }
 
     public static class RedisKey {
+        public static String ACTIVITY_KEY = RedisPrefix.RAFFLE_ACTIVITY + "big_market_activity_key_";
+        public static String ACTIVITY_SKU_KEY = RedisPrefix.RAFFLE_ACTIVITY + "big_market_activity_sku_key_";
+        public static String ACTIVITY_COUNT_KEY = RedisPrefix.RAFFLE_ACTIVITY + "big_market_activity_count_key_";
         public static String STRATEGY_KEY = RedisPrefix.STRATEGY + "big_market_strategy_key_";
         public static String STRATEGY_AWARD_KEY = RedisPrefix.STRATEGY_RAFFLE + "big_market_strategy_award_key_";
         public static String STRATEGY_AWARD_LIST_KEY = RedisPrefix.STRATEGY_ARMORY + "big_market_strategy_award_list_key_";
