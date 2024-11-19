@@ -3,7 +3,7 @@ package cn.cat.domain.strategy.service.rule.chain.impl;
 import cn.cat.domain.strategy.repository.IStrategyRepository;
 import cn.cat.domain.strategy.service.armory.IStrategyDispatch;
 import cn.cat.domain.strategy.service.rule.chain.AbstractLogicChain;
-import cn.cat.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.cat.domain.strategy.service.rule.chain.factory.DefaultLogicChainFactory;
 import cn.cat.types.common.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -23,7 +23,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
     public Long userScore = 0L;
 
     @Override
-    public DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId) {
+    public DefaultLogicChainFactory.StrategyAwardVO logic(String userId, Long strategyId) {
         log.info("抽奖责任链-权重开始 userId: {} strategyId: {} ruleModel: {}", userId, strategyId, ruleModel());
 
         String ruleValue = repository.queryStrategyRuleValue(strategyId, ruleModel());
@@ -36,7 +36,7 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
         if (nextValue != null) {
             Integer awardId = strategyDispatch.getRandomAwardId(strategyId, nextValue.toString());
             log.info("抽奖责任链-权重接管 userId: {} strategyId: {} ruleModel: {} awardId: {}", userId, strategyId, ruleModel(), awardId);
-            return DefaultChainFactory.StrategyAwardVO.builder()
+            return DefaultLogicChainFactory.StrategyAwardVO.builder()
                     .awardId(awardId)
                     .logicModel(ruleModel())
                     .build();
@@ -67,6 +67,6 @@ public class RuleWeightLogicChain extends AbstractLogicChain {
 
     @Override
     protected String ruleModel() {
-        return DefaultChainFactory.LogicModel.RULE_WEIGHT.getCode();
+        return DefaultLogicChainFactory.LogicModel.RULE_WEIGHT.getCode();
     }
 }

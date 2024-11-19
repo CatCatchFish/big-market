@@ -9,7 +9,7 @@ import cn.cat.domain.strategy.repository.IStrategyRepository;
 import cn.cat.domain.strategy.service.IRaffleAward;
 import cn.cat.domain.strategy.service.IRaffleStock;
 import cn.cat.domain.strategy.service.rule.chain.ILogicChain;
-import cn.cat.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.cat.domain.strategy.service.rule.chain.factory.DefaultLogicChainFactory;
 import cn.cat.domain.strategy.service.rule.tree.factory.DefaultTreeFactory;
 import cn.cat.domain.strategy.service.rule.tree.factory.engine.IDecisionTreeEngine;
 import lombok.extern.slf4j.Slf4j;
@@ -21,8 +21,8 @@ import java.util.List;
 @Service
 public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRaffleStock, IRaffleAward {
 
-    public DefaultRaffleStrategy(IStrategyRepository repository, DefaultChainFactory defaultChainFactory, DefaultTreeFactory defaultTreeFactory) {
-        super(repository, defaultChainFactory, defaultTreeFactory);
+    public DefaultRaffleStrategy(IStrategyRepository repository, DefaultLogicChainFactory defaultLogicChainFactory, DefaultTreeFactory defaultTreeFactory) {
+        super(repository, defaultLogicChainFactory, defaultTreeFactory);
     }
 
     /**
@@ -33,8 +33,8 @@ public class DefaultRaffleStrategy extends AbstractRaffleStrategy implements IRa
      * @return strategyAwardVO 奖品ID 抽奖策略
      */
     @Override
-    public DefaultChainFactory.StrategyAwardVO raffleLogicChain(String userId, Long strategyId) {
-        ILogicChain iLogicChain = defaultChainFactory.openLogicChain(strategyId);
+    public DefaultLogicChainFactory.StrategyAwardVO raffleLogicChain(String userId, Long strategyId) {
+        ILogicChain iLogicChain = defaultLogicChainFactory.openLogicChain(strategyId);
         return iLogicChain.logic(userId, strategyId);
     }
 

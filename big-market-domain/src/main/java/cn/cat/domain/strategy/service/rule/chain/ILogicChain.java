@@ -1,7 +1,7 @@
 package cn.cat.domain.strategy.service.rule.chain;
 
-import cn.cat.domain.strategy.service.rule.chain.factory.DefaultChainFactory;
+import cn.cat.domain.strategy.service.rule.chain.factory.DefaultLogicChainFactory;
 
 public interface ILogicChain extends ILogicChainLink {
-    DefaultChainFactory.StrategyAwardVO logic(String userId, Long strategyId);
+    DefaultLogicChainFactory.StrategyAwardVO logic(String userId, Long strategyId);
 }

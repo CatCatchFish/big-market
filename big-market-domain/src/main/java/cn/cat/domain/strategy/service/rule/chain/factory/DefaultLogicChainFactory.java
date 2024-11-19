@@ -9,11 +9,11 @@ import org.springframework.stereotype.Service;
 import java.util.Map;
 
 @Service
-public class DefaultChainFactory {
+public class DefaultLogicChainFactory {
     private final Map<String, ILogicChain> logicChainGroup;
     protected IStrategyRepository repository;
 
-    public DefaultChainFactory(Map<String, ILogicChain> logicChainGroup, IStrategyRepository repository) {
+    public DefaultLogicChainFactory(Map<String, ILogicChain> logicChainGroup, IStrategyRepository repository) {
         this.logicChainGroup = logicChainGroup;
         this.repository = repository;
     }

@@ -1,0 +1,45 @@
+24-11-18.20:49:14.536 [main            ] INFO  Application            - Starting Application using Java 1.8.0_281 on catlap with PID 21356 (D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app\target\classes started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market)
+24-11-18.20:49:14.539 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-11-18.20:49:16.504 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-18.20:49:16.507 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-18.20:49:16.560 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 0 Redis repository interfaces.
+24-11-18.20:49:17.471 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-11-18.20:49:17.471 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+24-11-18.20:49:17.471 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-11-18.20:49:17.471 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-11-18.20:49:17.486 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+24-11-18.20:49:17.496 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-11-18.20:49:17.496 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-11-18.20:49:17.496 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-11-18.20:49:17.643 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-11-18.20:49:17.643 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2766 ms
+24-11-18.20:49:18.300 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-18.20:49:18.757 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-18.20:49:18.774 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-18.20:49:18.949 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-18.20:49:19.679 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-18.20:49:19.696 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@34549979[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-18.20:49:19.770 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-11-18.20:49:19.780 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-11-18.20:49:19.791 [main            ] INFO  Application            - Started Application in 6.234 seconds (JVM running for 7.454)
+24-11-18.20:49:19.795 [Thread-19       ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-18.20:49:20.194 [RMI TCP Connection(3)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-11-18.20:49:20.195 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-11-18.20:49:20.196 [RMI TCP Connection(3)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-11-18.20:49:20.636 [RMI TCP Connection(5)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-18.20:49:21.197 [RMI TCP Connection(5)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-18.20:49:21.213 [RMI TCP Connection(5)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-18.20:49:21.236 [RMI TCP Connection(5)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-18.20:49:52.005 [http-nio-8091-exec-2] INFO  RaffleController       - 抽奖策略装配开始 strategyId：100006
+24-11-18.20:49:52.033 [http-nio-8091-exec-2] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-18.20:49:52.088 [http-nio-8091-exec-2] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-18.20:49:52.378 [http-nio-8091-exec-2] INFO  RaffleController       - 抽奖策略装配结束 strategyId：100006 结果：{"code":"0000","data":true,"info":"成功"}
+24-11-18.20:49:56.828 [http-nio-8091-exec-5] INFO  RaffleController       - 查询抽奖奖品列表配置开始 strategyId：100006
+24-11-18.20:49:56.863 [http-nio-8091-exec-5] INFO  RaffleController       - 查询抽奖奖品列表配置完成 strategyId：100006 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","sort":1},{"awardId":102,"awardTitle":"7等奖","sort":2},{"awardId":103,"awardTitle":"6等奖","sort":3},{"awardId":104,"awardTitle":"5等奖","sort":4},{"awardId":105,"awardTitle":"4等奖","sort":5},{"awardId":106,"awardSubtitle":"抽奖1次后解锁","awardTitle":"3等奖","sort":6},{"awardId":107,"awardSubtitle":"抽奖1次后解锁","awardTitle":"2等奖","sort":7},{"awardId":108,"awardSubtitle":"抽奖2次后解锁","awardTitle":"1等奖","sort":8}],"info":"成功"}
+24-11-18.21:01:37.249 [Thread-19       ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-18.21:01:37.262 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='update-stock-service', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-18.21:01:37.262 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-18.21:01:37.262 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-18.21:01:37.262 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-18.21:01:37.262 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-18.21:01:37.262 [Thread-18       ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
