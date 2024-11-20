@@ -15,6 +15,17 @@ app:
     # 跨域，开发阶段可以设置为 * 不限制
     cross-origin: '*'
 
+spring:
+  rabbitmq:
+    addresses: 192.168.136.129
+    port: 5672
+    username: cat
+    password: 123
+    listener:
+      simple:
+        prefetch: 1 # 每次投递n个消息，消费完在投递n个
+    topic:
+      activity_sku_stock_zero: activity_sku_stock_zero
 
 # 线程池配置
 thread:
