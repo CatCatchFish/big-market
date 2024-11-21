@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.cat.infrastructure.persistent.dao.IRaffleActivityOrderDao">
-
     <resultMap id="dataMap" type="cn.cat.infrastructure.persistent.po.RaffleActivityOrder">
         <id column="id" property="id"/>
         <result column="user_id" property="userId"/>
@@ -28,7 +27,6 @@
         values (#{userId}, #{sku}, #{activityId}, #{activityName}, #{strategyId}, #{orderId}, #{orderTime}, #{state},
                 #{outBusinessNo}, #{totalCount}, #{dayCount}, #{monthCount},
                 now(), now())
-
     </insert>
 
     <select id="queryRaffleActivityOrderByUserId" parameterType="java.lang.String" resultMap="dataMap">
@@ -43,4 +41,5 @@
         from raffle_activity_order
         where user_id = #{userId}
     </select>
+
 </mapper>
