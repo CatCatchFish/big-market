@@ -1,4 +1,4 @@
-package cn.cat.domain.activity.service.rule;
+package cn.cat.domain.activity.service.quota.rule;
 
 public abstract class AbstractActionChain implements IActionChain {
 

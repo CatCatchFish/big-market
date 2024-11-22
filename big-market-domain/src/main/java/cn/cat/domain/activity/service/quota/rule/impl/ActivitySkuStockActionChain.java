@@ -1,4 +1,4 @@
-package cn.cat.domain.activity.service.rule.impl;
+package cn.cat.domain.activity.service.quota.rule.impl;
 
 import cn.cat.domain.activity.model.entity.ActivityCountEntity;
 import cn.cat.domain.activity.model.entity.ActivityEntity;
@@ -6,7 +6,7 @@ import cn.cat.domain.activity.model.entity.ActivitySkuEntity;
 import cn.cat.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.cat.domain.activity.repository.IActivityRepository;
 import cn.cat.domain.activity.service.armory.IActivityDispatch;
-import cn.cat.domain.activity.service.rule.AbstractActionChain;
+import cn.cat.domain.activity.service.quota.rule.AbstractActionChain;
 import cn.cat.types.enums.ResponseCode;
 import cn.cat.types.exception.AppException;
 import lombok.extern.slf4j.Slf4j;
