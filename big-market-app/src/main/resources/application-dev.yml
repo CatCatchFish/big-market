@@ -26,6 +26,7 @@ spring:
         prefetch: 1 # 每次投递n个消息，消费完在投递n个
     topic:
       activity_sku_stock_zero: activity_sku_stock_zero
+      send_award: send_award
 
 # 线程池配置
 thread:
@@ -122,7 +123,7 @@ xxl:
     admin:
       addresses: http://192.168.136.129:9999/xxl-job-admin
     executor:
-      appname: update-stock-service
+      appname: big-market-app
       address:
       ip:
       port: 9111
