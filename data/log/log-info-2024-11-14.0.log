@@ -111,7 +111,7 @@
 24-11-14.16:51:13.281 [http-nio-8091-exec-7] INFO  RaffleController       - 查询抽奖奖品列表配置开始 strategyId：null
 24-11-14.16:51:13.292 [http-nio-8091-exec-7] ERROR RaffleController       - 查询抽奖奖品列表配置失败 strategyId：null
 java.lang.NullPointerException: null
-	at cn.cat.trigger.http.RaffleController.queryRaffleAwardList(RaffleController.java:84)
+	at cn.cat.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleController.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -503,7 +503,7 @@ java.net.NoRouteToHostException: No route to host: connect
 24-11-14.18:28:50.225 [RMI TCP Connection(1)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 2 ms
 24-11-14.18:28:50.232 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Starting...
 24-11-14.18:28:51.362 [RMI TCP Connection(2)-192.168.136.1] INFO  HikariDataSource       - HikariPool-1 - Start completed.
-24-11-14.18:28:55.624 [http-nio-8091-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.cat.types.model.Response<cn.cat.trigger.api.dto.RaffleResponseDTO> cn.cat.trigger.http.RaffleController.randomRaffle(cn.cat.trigger.api.dto.RaffleRequestDTO)]
+24-11-14.18:28:55.624 [http-nio-8091-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public cn.cat.types.model.Response<cn.cat.trigger.api.dto.RaffleStrategyResponseDTO> cn.cat.trigger.http.RaffleStrategyController.randomRaffle(cn.cat.trigger.api.dto.RaffleStrategyRequestDTO)]
 24-11-14.18:29:21.698 [http-nio-8091-exec-4] INFO  RaffleController       - 随机抽奖开始 strategyId: 100006
 24-11-14.18:29:21.752 [http-nio-8091-exec-4] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: system strategyId: 100006 ruleModel: rule_default awardId: 107
 24-11-14.18:29:21.753 [http-nio-8091-exec-4] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 system 100006 107 rule_default

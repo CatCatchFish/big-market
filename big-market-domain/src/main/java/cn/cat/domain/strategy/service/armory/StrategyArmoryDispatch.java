@@ -21,6 +21,8 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
     @Resource
     private IStrategyRepository repository;
 
+    private final SecureRandom secureRandom = new SecureRandom();
+
     @Override
     public boolean assembleLotteryStrategy(Long strategyId) {
         // 1.查询策略奖品列表
@@ -55,6 +57,12 @@ public class StrategyArmoryDispatch implements IStrategyArmory, IStrategyDispatc
             assembleLotteryStrategy(keyStr, strategyAwardEntitiesCopy);
         }
         return true;
+    }
+
+    @Override
+    public boolean assembleLotteryStrategyByActivityId(Long activityId) {
+        Long strategyId = repository.queryStrategyIdByActivityId(activityId);
+        return assembleLotteryStrategy(strategyId);
     }
 
     private void assembleLotteryStrategy(String key, List<StrategyAwardEntity> strategyAwardEntities) {

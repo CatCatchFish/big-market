@@ -1,0 +1,38 @@
+24-11-22.21:02:35.009 [main            ] INFO  Application            - Starting Application using Java 1.8.0_281 on catlap with PID 448 (D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app\target\classes started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market)
+24-11-22.21:02:35.013 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-11-22.21:02:36.467 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-22.21:02:36.472 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-22.21:02:36.562 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 0 Redis repository interfaces.
+24-11-22.21:02:37.486 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8091 (http)
+24-11-22.21:02:37.486 [main            ] INFO  AprLifecycleListener   - Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+24-11-22.21:02:37.486 [main            ] INFO  AprLifecycleListener   - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+24-11-22.21:02:37.486 [main            ] INFO  AprLifecycleListener   - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+24-11-22.21:02:37.489 [main            ] INFO  AprLifecycleListener   - OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+24-11-22.21:02:37.497 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8091"]
+24-11-22.21:02:37.497 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-11-22.21:02:37.497 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-11-22.21:02:37.677 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-11-22.21:02:37.678 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2358 ms
+24-11-22.21:02:38.359 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-22.21:02:38.769 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.21:02:38.782 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.21:02:39.633 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-22.21:02:40.457 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-22.21:02:40.480 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:sendMessageTaskJob, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@661db63e[class cn.cat.trigger.job.SendMessageTaskJob#exec]
+24-11-22.21:02:40.480 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5cf2f5d6[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-22.21:02:40.480 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@429f0ca8[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-22.21:02:40.589 [Thread-19       ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-22.21:02:40.625 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8091"]
+24-11-22.21:02:40.637 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8091 (http) with context path ''
+24-11-22.21:02:40.639 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-22.21:02:40.756 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#1d99ee1b:0/SimpleConnection@6fe2a366 [delegate=amqp://cat@192.168.136.129:5672/, localPort= 56174]
+24-11-22.21:02:40.927 [main            ] INFO  Application            - Started Application in 6.758 seconds (JVM running for 8.386)
+24-11-22.21:02:41.483 [RMI TCP Connection(2)-192.168.136.1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-11-22.21:02:41.483 [RMI TCP Connection(2)-192.168.136.1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-11-22.21:02:41.484 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.21:02:41.484 [RMI TCP Connection(2)-192.168.136.1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-11-22.21:02:41.895 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.21:02:41.920 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.21:02:41.967 [RMI TCP Connection(1)-192.168.136.1] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.21:02:43.834 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-22.21:02:43.836 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.

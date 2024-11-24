@@ -2,13 +2,13 @@ package cn.cat.trigger.api;
 
 import cn.cat.trigger.api.dto.RaffleAwardListRequestDTO;
 import cn.cat.trigger.api.dto.RaffleAwardListResponseDTO;
-import cn.cat.trigger.api.dto.RaffleRequestDTO;
-import cn.cat.trigger.api.dto.RaffleResponseDTO;
+import cn.cat.trigger.api.dto.RaffleStrategyRequestDTO;
+import cn.cat.trigger.api.dto.RaffleStrategyResponseDTO;
 import cn.cat.types.model.Response;
 
 import java.util.List;
 
-public interface IRaffleService {
+public interface IRaffleStrategyService {
     /**
      * 装配抽奖奖品接口
      *
@@ -31,6 +31,6 @@ public interface IRaffleService {
      * @param requestDTO 请求参数
      * @return 抽奖结果
      */
-    Response<RaffleResponseDTO> randomRaffle(RaffleRequestDTO requestDTO);
+    Response<RaffleStrategyResponseDTO> randomRaffle(RaffleStrategyRequestDTO requestDTO);
 
 }
