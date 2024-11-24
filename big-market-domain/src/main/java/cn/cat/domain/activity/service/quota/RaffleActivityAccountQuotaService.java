@@ -5,7 +5,7 @@ import cn.cat.domain.activity.model.entity.*;
 import cn.cat.domain.activity.model.valobj.ActivitySkuStockKeyVO;
 import cn.cat.domain.activity.model.valobj.OrderStateVO;
 import cn.cat.domain.activity.repository.IActivityRepository;
-import cn.cat.domain.activity.service.ISkuStock;
+import cn.cat.domain.activity.service.IRaffleActivitySkuStockService;
 import cn.cat.domain.activity.service.quota.rule.factory.DefaultActivityChainFactory;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
-public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAccountQuotaAccountQuota implements ISkuStock {
+public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAccountQuotaAccountQuota implements IRaffleActivitySkuStockService {
     public RaffleActivityAccountQuotaService(IActivityRepository activityRepository, DefaultActivityChainFactory defaultActivityChainFactory) {
         super(activityRepository, defaultActivityChainFactory);
     }
@@ -73,4 +73,8 @@ public class RaffleActivityAccountQuotaService extends AbstractRaffleActivityAcc
         activityRepository.clearActivitySkuStock(sku);
     }
 
+    @Override
+    public Integer queryRaffleActivityAccountDayPartakeCount(Long activityId, String userId) {
+        return activityRepository.queryRaffleActivityAccountDayPartakeCount(activityId, userId);
+    }
 }

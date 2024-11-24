@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StrategyAwardEntity {
+
     /**
      * 抽奖策略ID
      */
@@ -44,4 +45,9 @@ public class StrategyAwardEntity {
      * 奖品分类
      */
     private Integer sort;
+    /**
+     * 规则模型，rule配置的模型同步到此表，便于使用
+     */
+    private String ruleModels;
+
 }

@@ -1,7 +1,7 @@
 package cn.cat.trigger.job;
 
 import cn.cat.domain.activity.model.valobj.ActivitySkuStockKeyVO;
-import cn.cat.domain.activity.service.ISkuStock;
+import cn.cat.domain.activity.service.IRaffleActivitySkuStockService;
 import com.xxl.job.core.handler.annotation.XxlJob;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 @Component
 public class UpdateActivitySkuStockJob {
     @Resource
-    private ISkuStock skuStock;
+    private IRaffleActivitySkuStockService skuStock;
 
     @XxlJob("updateSkuStockHandler")
     public void exec() {

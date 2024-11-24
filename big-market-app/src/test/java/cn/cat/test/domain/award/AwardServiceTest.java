@@ -1,4 +1,4 @@
-package cn.cat.test.award;
+package cn.cat.test.domain.award;
 
 import cn.cat.domain.award.model.entity.UserAwardRecordEntity;
 import cn.cat.domain.award.model.valobj.AwardStateVO;
