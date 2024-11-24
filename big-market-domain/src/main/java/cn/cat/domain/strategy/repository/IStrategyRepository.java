@@ -7,6 +7,7 @@ import cn.cat.domain.strategy.model.valobj.RuleTreeVO;
 import cn.cat.domain.strategy.model.valobj.StrategyAwardRuleModelVO;
 import cn.cat.domain.strategy.model.valobj.StrategyAwardStockKeyVO;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -34,6 +35,8 @@ public interface IStrategyRepository {
     void cacheStrategyAwardCount(String cacheKey, Integer awardCount);
 
     Boolean subtractionAwardStock(String cacheKey);
+
+    Boolean subtractionAwardStock(String cacheKey, Date endDateTime);
 
     /**
      * 写入奖品库存消费队列

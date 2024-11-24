@@ -16,10 +16,7 @@ import org.redisson.api.RDelayedQueue;
 import org.springframework.stereotype.Repository;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import static cn.cat.types.enums.ResponseCode.UN_ASSEMBLED_STRATEGY_ARMORY;
@@ -217,6 +214,11 @@ public class StrategyRepository implements IStrategyRepository {
 
     @Override
     public Boolean subtractionAwardStock(String cacheKey) {
+        return subtractionAwardStock(cacheKey, null);
+    }
+
+    @Override
+    public Boolean subtractionAwardStock(String cacheKey, Date endDateTime) {
         long surplus = redisService.decr(cacheKey);
         if (surplus < 0) {
             // 库存不足，设置缓存为0
@@ -226,9 +228,15 @@ public class StrategyRepository implements IStrategyRepository {
         // 1、将decr后的值和key组成库存锁
         // 2、加锁兜底，防止库存恢复行为导致超卖
         String lockKey = cacheKey + Constants.UNDERLINE + surplus;
-        Boolean lock = redisService.setNx(lockKey);
+        Boolean lock;
+        if (null != endDateTime) {
+            long expireMillis = endDateTime.getTime() - System.currentTimeMillis() + TimeUnit.DAYS.toMillis(1);
+            lock = redisService.setNx(lockKey, expireMillis, TimeUnit.MILLISECONDS);
+        } else {
+            lock = redisService.setNx(lockKey);
+        }
         if (!lock) {
-            log.error("库存锁失败，cacheKey={}, surplus={}", cacheKey, surplus);
+            log.info("策略奖品库存加锁失败 {}", lockKey);
         }
         return lock;
     }

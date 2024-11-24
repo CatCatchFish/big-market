@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 /**
  * 抽奖策略因子实体类
  */
@@ -26,4 +28,8 @@ public class RaffleFactorEntity {
      * 奖品ID
      */
     private Integer awardId;
+    /**
+     * 结束时间
+     */
+    private Date endDateTime;
 }

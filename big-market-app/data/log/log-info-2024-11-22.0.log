@@ -1,0 +1,145 @@
+24-11-22.15:43:05.054 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_281 on catlap with PID 25196 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-22.15:43:05.056 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-11-22.15:43:06.972 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-22.15:43:06.978 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-22.15:43:07.055 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
+24-11-22.15:43:10.139 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-22.15:43:10.772 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.15:43:10.808 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.15:43:12.871 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-22.15:43:16.742 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-22.15:43:16.857 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@42cd0fc6[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-22.15:43:16.857 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@e5864c2[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-22.15:43:17.193 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-22.15:43:17.219 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-22.15:43:17.576 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#13e1e816:0/SimpleConnection@45abbd24 [delegate=amqp://cat@192.168.136.129:5672/, localPort= 64535]
+24-11-22.15:43:17.849 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 13.366 seconds (JVM running for 15.306)
+24-11-22.15:43:18.707 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.15:43:19.141 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.15:43:19.257 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-22.15:43:19.885 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-22.15:43:19.933 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-22.15:43:19.935 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-22.15:43:22.007 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='update-stock-service', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-22.15:43:22.007 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-22.15:43:22.007 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-22.15:43:22.007 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-22.15:43:22.007 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-22.15:43:22.008 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-22.15:44:55.575 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_281 on catlap with PID 2020 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-22.15:44:55.576 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-11-22.15:44:56.987 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-22.15:44:56.990 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-22.15:44:57.035 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 0 Redis repository interfaces.
+24-11-22.15:44:59.725 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-22.15:45:00.243 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.15:45:00.294 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.15:45:02.323 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-22.15:45:06.322 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-22.15:45:06.502 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7641ed02[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-22.15:45:06.502 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@4ebed2b3[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-22.15:45:06.947 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-22.15:45:06.974 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-22.15:45:07.203 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#5bb97fe7:0/SimpleConnection@57ed02e6 [delegate=amqp://cat@192.168.136.129:5672/, localPort= 64898]
+24-11-22.15:45:07.372 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 12.534 seconds (JVM running for 13.808)
+24-11-22.15:45:08.029 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.15:45:08.403 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.15:45:08.499 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-22.15:45:09.357 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-22.15:45:09.385 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-22.15:45:09.386 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-22.15:45:09.403 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='update-stock-service', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-22.15:45:09.403 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-22.15:45:09.403 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-22.15:45:09.403 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-22.15:45:09.404 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-22.15:45:09.404 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-22.15:49:31.097 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_281 on catlap with PID 18632 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-22.15:49:31.099 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-11-22.15:49:32.403 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-22.15:49:32.406 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-22.15:49:32.454 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 0 Redis repository interfaces.
+24-11-22.15:49:34.666 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-22.15:49:35.106 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.15:49:35.132 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.15:49:36.812 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-22.15:49:40.114 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-22.15:49:40.217 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5909285b[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-22.15:49:40.217 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2059f785[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-22.15:49:40.551 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-22.15:49:40.568 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-22.15:49:40.732 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#10b87ff6:0/SimpleConnection@6a6a2fdd [delegate=amqp://cat@192.168.136.129:5672/, localPort= 65298]
+24-11-22.15:49:40.866 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 10.2 seconds (JVM running for 10.946)
+24-11-22.15:49:41.315 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.15:49:41.575 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.15:49:41.697 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-22.15:49:41.843 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-22.15:49:41.876 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-22.15:49:41.880 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-22.15:49:41.911 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='update-stock-service', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-22.15:49:41.911 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-22.15:49:41.912 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-22.15:49:41.912 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-22.15:49:41.912 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-22.15:49:41.913 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-22.16:01:25.662 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_281 on catlap with PID 8056 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-22.16:01:25.664 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-11-22.16:01:27.155 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-22.16:01:27.159 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-22.16:01:27.225 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+24-11-22.16:01:30.096 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-22.16:01:30.948 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.16:01:30.992 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.16:01:32.998 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-22.16:01:36.869 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-22.16:01:36.936 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@42cd0fc6[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-22.16:01:36.937 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@e5864c2[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-22.16:01:37.286 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-22.16:01:37.302 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-22.16:01:37.526 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#13e1e816:0/SimpleConnection@45abbd24 [delegate=amqp://cat@192.168.136.129:5672/, localPort= 52600]
+24-11-22.16:01:37.720 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 13.05 seconds (JVM running for 14.796)
+24-11-22.16:01:38.372 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.16:01:38.749 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.16:01:39.161 [main            ] INFO  RaffleActivityPartakeServiceTest - 请求参数：{"activityId":100301,"userId":"cat"}
+24-11-22.16:01:39.169 [main            ] INFO  RaffleActivityPartakeServiceTest - 测试结果：{"activityId":100301,"activityName":"测试活动","orderId":"714633907531","orderState":"create","orderTime":1732262498219,"strategyId":100006,"userId":"cat"}
+24-11-22.16:01:39.188 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-22.16:01:39.713 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-22.16:01:39.759 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-22.16:01:39.760 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-22.16:01:39.792 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='update-stock-service', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-22.16:01:39.793 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-22.16:01:39.793 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-22.16:01:39.793 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-22.16:01:39.795 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-22.16:01:39.796 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-22.16:03:39.832 [main            ] INFO  RaffleActivityPartakeServiceTest - Starting RaffleActivityPartakeServiceTest using Java 1.8.0_281 on catlap with PID 26896 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-22.16:03:39.834 [main            ] INFO  RaffleActivityPartakeServiceTest - The following 1 profile is active: "dev"
+24-11-22.16:03:40.818 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-22.16:03:40.821 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-22.16:03:40.853 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+24-11-22.16:03:43.047 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-22.16:03:43.520 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.16:03:43.545 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-22.16:03:45.405 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-22.16:03:49.348 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-22.16:03:49.459 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3d9c8c3c[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-22.16:03:49.460 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2dc73024[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-22.16:03:49.775 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-22.16:03:49.796 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-22.16:03:50.043 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#13e1e816:0/SimpleConnection@54d35ed5 [delegate=amqp://cat@192.168.136.129:5672/, localPort= 52935]
+24-11-22.16:03:50.207 [main            ] INFO  RaffleActivityPartakeServiceTest - Started RaffleActivityPartakeServiceTest in 10.839 seconds (JVM running for 11.605)
+24-11-22.16:03:50.834 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-22.16:03:51.204 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-22.16:03:51.455 [main            ] INFO  AbstractRaffleActivityPartake - 创建参与活动订单 userId:cat activityId:100301 userRaffleOrderEntity:{"activityId":100301,"activityName":"测试活动","orderId":"714633907531","orderState":"create","orderTime":1732262498000,"strategyId":100006,"userId":"cat"}
+24-11-22.16:03:51.458 [main            ] INFO  RaffleActivityPartakeServiceTest - 请求参数：{"activityId":100301,"userId":"cat"}
+24-11-22.16:03:51.458 [main            ] INFO  RaffleActivityPartakeServiceTest - 测试结果：{"activityId":100301,"activityName":"测试活动","orderId":"714633907531","orderState":"create","orderTime":1732262498000,"strategyId":100006,"userId":"cat"}
+24-11-22.16:03:51.480 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-22.16:03:52.197 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-22.16:03:52.233 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-22.16:03:52.234 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-22.16:03:52.251 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='update-stock-service', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-22.16:03:52.251 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-22.16:03:52.251 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-22.16:03:52.253 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-22.16:03:52.253 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-22.16:03:52.254 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
