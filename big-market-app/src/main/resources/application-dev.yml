@@ -130,3 +130,12 @@ xxl:
       logpath: /data/applogs/xxl-job/jobhandler
       logretentiondays: 30
     accessToken: default_token
+
+zookeeper:
+  sdk:
+    config:
+      connect-string: 192.168.136.129:2181
+      base-sleep-time-ms: 1000
+      max-retries: 3
+      session-timeout-ms: 18000
+      connection-timeout-ms: 30000

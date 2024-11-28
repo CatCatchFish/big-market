@@ -13,6 +13,7 @@ import cn.cat.domain.strategy.service.armory.IStrategyArmory;
 import cn.cat.trigger.api.IRaffleActivityService;
 import cn.cat.trigger.api.dto.ActivityDrawRequestDTO;
 import cn.cat.trigger.api.dto.ActivityDrawResponseDTO;
+import cn.cat.types.annotations.DCCValue;
 import cn.cat.types.enums.ResponseCode;
 import cn.cat.types.exception.AppException;
 import cn.cat.types.model.Response;
@@ -28,6 +29,10 @@ import java.util.Date;
 @CrossOrigin("${app.config.cross-origin}")
 @RequestMapping("/api/${app.config.api-version}/raffle/activity/")
 public class RaffleActivityController implements IRaffleActivityService {
+    // dcc 统一配置中心动态配置降级开关
+    @DCCValue("degradeSwitch:open")
+    private String degradeSwitch;
+
     @Resource
     private IRaffleActivityPartakeService raffleActivityPartakeService;
     @Resource
@@ -98,6 +103,13 @@ public class RaffleActivityController implements IRaffleActivityService {
     public Response<ActivityDrawResponseDTO> draw(@RequestBody ActivityDrawRequestDTO request) {
         try {
             log.info("活动抽奖 userId:{} activityId:{}", request.getUserId(), request.getActivityId());
+            if (!"open".equals(degradeSwitch)) {
+                // 降级开关开启，直接返回降级结果
+                return Response.<ActivityDrawResponseDTO>builder()
+                        .code(ResponseCode.DEGRADE_SWITCH.getCode())
+                        .info(ResponseCode.DEGRADE_SWITCH.getInfo())
+                        .build();
+            }
             // 1. 参数校验
             if (StringUtils.isBlank(request.getUserId()) || null == request.getActivityId()) {
                 throw new AppException(ResponseCode.ILLEGAL_PARAMETER.getCode(), ResponseCode.ILLEGAL_PARAMETER.getInfo());

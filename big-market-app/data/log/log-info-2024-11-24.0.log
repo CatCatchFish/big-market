@@ -1,0 +1,301 @@
+24-11-24.15:45:05.333 [main            ] INFO  RaffleStrategyControllerTest - Starting RaffleStrategyControllerTest using Java 1.8.0_281 on catlap with PID 7492 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-24.15:45:05.335 [main            ] INFO  RaffleStrategyControllerTest - The following 1 profile is active: "dev"
+24-11-24.15:45:07.082 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-24.15:45:07.087 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-24.15:45:07.211 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 0 Redis repository interfaces.
+24-11-24.15:45:09.427 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-24.15:45:09.868 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.15:45:09.886 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.15:45:12.687 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-24.15:45:16.306 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-24.15:45:16.375 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:sendMessageTaskJob, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@56f61d74[class cn.cat.trigger.job.SendMessageTaskJob#exec]
+24-11-24.15:45:16.376 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@44d84313[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-24.15:45:16.376 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5bdb9c69[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-24.15:45:16.731 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-24.15:45:16.739 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-24.15:45:16.924 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#353b0719:0/SimpleConnection@6104691c [delegate=amqp://cat@192.168.136.129:5672/, localPort= 65361]
+24-11-24.15:45:17.084 [main            ] INFO  RaffleStrategyControllerTest - Started RaffleStrategyControllerTest in 12.515 seconds (JVM running for 14.109)
+24-11-24.15:45:17.630 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配开始 userId:cat activityId：100301
+24-11-24.15:45:17.671 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.15:45:17.952 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.15:45:18.187 [main            ] ERROR RaffleStrategyController - 查询抽奖奖品列表配置失败 userId:cat activityId：100301
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Table 'big_market.raffle_activity_account_day' doesn't exist
+### The error may exist in file [D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app\target\classes\mybatis\mapper\raffle_activity_account_day_mapper.xml]
+### The error may involve cn.cat.infrastructure.persistent.dao.IRaffleActivityAccountDayDao.queryRaffleActivityAccountDayPartakeCount-Inline
+### The error occurred while setting parameters
+### SQL: select day_count - day_count_surplus         from raffle_activity_account_day         where user_id = ?           and activity_id = ?           and day = ?
+### Cause: java.sql.SQLSyntaxErrorException: Table 'big_market.raffle_activity_account_day' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Table 'big_market.raffle_activity_account_day' doesn't exist
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:239)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:70)
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:91)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:441)
+	at com.sun.proxy.$Proxy108.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:160)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy118.queryRaffleActivityAccountDayPartakeCount(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:220)
+	at com.sun.proxy.$Proxy119.queryRaffleActivityAccountDayPartakeCount(Unknown Source)
+	at cn.cat.infrastructure.persistent.repository.ActivityRepository.queryRaffleActivityAccountDayPartakeCount(ActivityRepository.java:434)
+	at cn.cat.infrastructure.persistent.repository.ActivityRepository$$FastClassBySpringCGLIB$$d8d8aeb6.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at cn.cat.infrastructure.persistent.repository.ActivityRepository$$EnhancerBySpringCGLIB$$f3fe5722.queryRaffleActivityAccountDayPartakeCount(<generated>)
+	at cn.cat.domain.activity.service.quota.RaffleActivityAccountQuotaService.queryRaffleActivityAccountDayPartakeCount(RaffleActivityAccountQuotaService.java:78)
+	at cn.cat.trigger.http.RaffleStrategyController.queryRaffleAwardList(RaffleStrategyController.java:105)
+	at cn.cat.test.trigger.RaffleStrategyControllerTest.test_queryRaffleAwardList(RaffleStrategyControllerTest.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+Caused by: java.sql.SQLSyntaxErrorException: Table 'big_market.raffle_activity_account_day' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63)
+	at com.sun.proxy.$Proxy200.query(Unknown Source)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:325)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:89)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	... 64 common frames omitted
+24-11-24.15:45:18.565 [main            ] INFO  RaffleStrategyControllerTest - 请求参数：{"activityId":100301,"userId":"cat"}
+24-11-24.15:45:18.572 [main            ] INFO  RaffleStrategyControllerTest - 测试结果：{"code":"0001","info":"调用失败"}
+24-11-24.15:45:18.596 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.15:45:18.599 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.15:45:19.048 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.15:45:19.060 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.15:45:19.132 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.15:45:19.132 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.15:45:19.135 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-24.15:45:19.176 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='big-market-app', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-24.15:45:19.176 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-24.15:45:19.176 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-24.15:45:19.178 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-24.15:45:19.179 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-24.15:45:19.180 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-24.15:48:09.580 [main            ] INFO  RaffleStrategyControllerTest - Starting RaffleStrategyControllerTest using Java 1.8.0_281 on catlap with PID 11228 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-24.15:48:09.583 [main            ] INFO  RaffleStrategyControllerTest - The following 1 profile is active: "dev"
+24-11-24.15:48:11.043 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-24.15:48:11.047 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-24.15:48:11.107 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+24-11-24.15:48:13.164 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-24.15:48:13.625 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.15:48:13.646 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.15:48:16.519 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-24.15:48:20.012 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-24.15:48:20.068 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:sendMessageTaskJob, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3458dab6[class cn.cat.trigger.job.SendMessageTaskJob#exec]
+24-11-24.15:48:20.070 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@23d060c2[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-24.15:48:20.070 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@59278072[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-24.15:48:20.418 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-24.15:48:20.426 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-24.15:48:20.672 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6029f2a4:0/SimpleConnection@61becbcf [delegate=amqp://cat@192.168.136.129:5672/, localPort= 49325]
+24-11-24.15:48:20.903 [main            ] INFO  RaffleStrategyControllerTest - Started RaffleStrategyControllerTest in 12.128 seconds (JVM running for 13.41)
+24-11-24.15:48:21.358 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配开始 userId:cat activityId：100301
+24-11-24.15:48:21.410 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.15:48:21.743 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.15:48:21.892 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.15:48:21.915 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.15:48:22.138 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配置完成 userId:cat activityId：100301 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","isAwardUnlock":true,"sort":1,"waitUnLockCount":0},{"awardId":102,"awardTitle":"7等奖","isAwardUnlock":true,"sort":2,"waitUnLockCount":0},{"awardId":103,"awardTitle":"6等奖","isAwardUnlock":true,"sort":3,"waitUnLockCount":0},{"awardId":104,"awardTitle":"5等奖","isAwardUnlock":true,"sort":4,"waitUnLockCount":0},{"awardId":105,"awardTitle":"4等奖","isAwardUnlock":true,"sort":5,"waitUnLockCount":0},{"awardId":106,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"3等奖","isAwardUnlock":true,"sort":6,"waitUnLockCount":0},{"awardId":107,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"2等奖","isAwardUnlock":true,"sort":7,"waitUnLockCount":0},{"awardId":108,"awardRuleLockCount":2,"awardSubtitle":"抽奖2次后解锁","awardTitle":"1等奖","isAwardUnlock":true,"sort":8,"waitUnLockCount":0}],"info":"调用成功"}
+24-11-24.15:48:22.143 [main            ] INFO  RaffleStrategyControllerTest - 请求参数：{"activityId":100301,"userId":"cat"}
+24-11-24.15:48:22.144 [main            ] INFO  RaffleStrategyControllerTest - 测试结果：{"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","isAwardUnlock":true,"sort":1,"waitUnLockCount":0},{"awardId":102,"awardTitle":"7等奖","isAwardUnlock":true,"sort":2,"waitUnLockCount":0},{"awardId":103,"awardTitle":"6等奖","isAwardUnlock":true,"sort":3,"waitUnLockCount":0},{"awardId":104,"awardTitle":"5等奖","isAwardUnlock":true,"sort":4,"waitUnLockCount":0},{"awardId":105,"awardTitle":"4等奖","isAwardUnlock":true,"sort":5,"waitUnLockCount":0},{"awardId":106,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"3等奖","isAwardUnlock":true,"sort":6,"waitUnLockCount":0},{"awardId":107,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"2等奖","isAwardUnlock":true,"sort":7,"waitUnLockCount":0},{"awardId":108,"awardRuleLockCount":2,"awardSubtitle":"抽奖2次后解锁","awardTitle":"1等奖","isAwardUnlock":true,"sort":8,"waitUnLockCount":0}],"info":"调用成功"}
+24-11-24.15:48:22.164 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.15:48:22.167 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.15:48:22.868 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.15:48:22.880 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.15:48:22.934 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.15:48:22.935 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.15:48:22.937 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-24.15:48:22.947 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='big-market-app', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-24.15:48:22.949 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-24.15:48:22.949 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-24.15:48:22.949 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-24.15:48:22.950 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-24.15:48:22.950 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-24.15:50:50.124 [main            ] INFO  RaffleStrategyControllerTest - Starting RaffleStrategyControllerTest using Java 1.8.0_281 on catlap with PID 6572 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-24.15:50:50.125 [main            ] INFO  RaffleStrategyControllerTest - The following 1 profile is active: "dev"
+24-11-24.15:50:51.133 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-24.15:50:51.135 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-24.15:50:51.173 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 0 Redis repository interfaces.
+24-11-24.15:50:52.790 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-24.15:50:53.233 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.15:50:53.264 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.15:50:55.800 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-24.15:50:59.519 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-24.15:50:59.632 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:sendMessageTaskJob, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@23d060c2[class cn.cat.trigger.job.SendMessageTaskJob#exec]
+24-11-24.15:50:59.632 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@59278072[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-24.15:50:59.632 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@61be6051[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-24.15:51:00.018 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-24.15:51:00.024 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-24.15:51:00.293 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6029f2a4:0/SimpleConnection@20171cdc [delegate=amqp://cat@192.168.136.129:5672/, localPort= 49864]
+24-11-24.15:51:00.514 [main            ] INFO  RaffleStrategyControllerTest - Started RaffleStrategyControllerTest in 10.942 seconds (JVM running for 12.181)
+24-11-24.15:51:01.129 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配开始 userId:cat activityId：100301
+24-11-24.15:51:01.188 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.15:51:01.634 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.15:51:01.790 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.15:51:01.833 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.15:51:02.114 [main            ] INFO  RaffleStrategyController - 查询抽奖奖品列表配置完成 userId:cat activityId：100301 response: {"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","isAwardUnlock":true,"sort":1,"waitUnLockCount":0},{"awardId":102,"awardTitle":"7等奖","isAwardUnlock":true,"sort":2,"waitUnLockCount":0},{"awardId":103,"awardTitle":"6等奖","isAwardUnlock":true,"sort":3,"waitUnLockCount":0},{"awardId":104,"awardTitle":"5等奖","isAwardUnlock":true,"sort":4,"waitUnLockCount":0},{"awardId":105,"awardTitle":"4等奖","isAwardUnlock":true,"sort":5,"waitUnLockCount":0},{"awardId":106,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"3等奖","isAwardUnlock":false,"sort":6,"waitUnLockCount":1},{"awardId":107,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"2等奖","isAwardUnlock":false,"sort":7,"waitUnLockCount":1},{"awardId":108,"awardRuleLockCount":2,"awardSubtitle":"抽奖2次后解锁","awardTitle":"1等奖","isAwardUnlock":false,"sort":8,"waitUnLockCount":2}],"info":"调用成功"}
+24-11-24.15:51:02.120 [main            ] INFO  RaffleStrategyControllerTest - 请求参数：{"activityId":100301,"userId":"cat"}
+24-11-24.15:51:02.121 [main            ] INFO  RaffleStrategyControllerTest - 测试结果：{"code":"0000","data":[{"awardId":101,"awardTitle":"随机积分","isAwardUnlock":true,"sort":1,"waitUnLockCount":0},{"awardId":102,"awardTitle":"7等奖","isAwardUnlock":true,"sort":2,"waitUnLockCount":0},{"awardId":103,"awardTitle":"6等奖","isAwardUnlock":true,"sort":3,"waitUnLockCount":0},{"awardId":104,"awardTitle":"5等奖","isAwardUnlock":true,"sort":4,"waitUnLockCount":0},{"awardId":105,"awardTitle":"4等奖","isAwardUnlock":true,"sort":5,"waitUnLockCount":0},{"awardId":106,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"3等奖","isAwardUnlock":false,"sort":6,"waitUnLockCount":1},{"awardId":107,"awardRuleLockCount":1,"awardSubtitle":"抽奖1次后解锁","awardTitle":"2等奖","isAwardUnlock":false,"sort":7,"waitUnLockCount":1},{"awardId":108,"awardRuleLockCount":2,"awardSubtitle":"抽奖2次后解锁","awardTitle":"1等奖","isAwardUnlock":false,"sort":8,"waitUnLockCount":2}],"info":"调用成功"}
+24-11-24.15:51:02.147 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.15:51:02.149 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.15:51:02.477 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.15:51:02.488 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.15:51:02.524 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.15:51:02.525 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.15:51:02.526 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-24.15:51:02.543 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='big-market-app', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-24.15:51:02.543 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-24.15:51:02.543 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-24.15:51:02.544 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-24.15:51:02.544 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-24.15:51:02.545 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-24.16:56:37.538 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_281 on catlap with PID 10644 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-24.16:56:37.539 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+24-11-24.16:56:39.409 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-24.16:56:39.414 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-24.16:56:39.482 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 0 Redis repository interfaces.
+24-11-24.16:56:41.777 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-24.16:56:42.272 [redisson-netty-2-4] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.16:56:42.293 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.16:56:45.289 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-24.16:56:49.504 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-24.16:56:49.639 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:sendMessageTaskJob, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@5bdb9c69[class cn.cat.trigger.job.SendMessageTaskJob#exec]
+24-11-24.16:56:49.640 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@511de4dd[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-24.16:56:49.640 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@37e64e37[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-24.16:56:50.044 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-24.16:56:50.063 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-24.16:56:50.248 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6029f2a4:0/SimpleConnection@4cb82b09 [delegate=amqp://cat@192.168.136.129:5672/, localPort= 53729]
+24-11-24.16:56:50.404 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 13.649 seconds (JVM running for 15.283)
+24-11-24.16:56:50.977 [main            ] INFO  RaffleActivityController - 活动装配，数据预热，开始 activityId:100301
+24-11-24.16:56:51.010 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.16:56:51.280 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.16:56:51.485 [main            ] INFO  RaffleActivityController - 活动装配，数据预热，完成 activityId:100301
+24-11-24.16:56:51.832 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":true,"info":"调用成功"}
+24-11-24.16:56:51.861 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.16:56:51.863 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.16:56:52.371 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.16:56:52.384 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.16:56:52.419 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.16:56:52.420 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.16:56:52.421 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-24.16:56:52.429 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='big-market-app', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-24.16:56:52.429 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-24.16:56:52.429 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-24.16:56:52.430 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-24.16:56:52.430 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-24.16:56:52.431 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
+24-11-24.16:57:05.571 [main            ] INFO  RaffleActivityControllerTest - Starting RaffleActivityControllerTest using Java 1.8.0_281 on catlap with PID 18000 (started by Cat in D:\IdeaWorkSpace\GagaPlus\big-market\big-market-app)
+24-11-24.16:57:05.573 [main            ] INFO  RaffleActivityControllerTest - The following 1 profile is active: "dev"
+24-11-24.16:57:06.989 [main            ] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+24-11-24.16:57:06.993 [main            ] INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+24-11-24.16:57:07.053 [main            ] INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 0 Redis repository interfaces.
+24-11-24.16:57:08.862 [main            ] INFO  Version                - Redisson 3.23.4
+24-11-24.16:57:09.410 [redisson-netty-2-5] INFO  MasterPubSubConnectionPool - 1 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.16:57:09.433 [redisson-netty-2-13] INFO  MasterConnectionPool   - 5 connections initialized for 192.168.136.129/192.168.136.129:6379
+24-11-24.16:57:11.917 [main            ] INFO  XxlJobAutoConfig       - >>>>>>>>>>> xxl-job config init.
+24-11-24.16:57:15.283 [main            ] INFO  EndpointLinksResolver  - Exposing 1 endpoint(s) beneath base path '/actuator'
+24-11-24.16:57:15.359 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:sendMessageTaskJob, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@13c18bba[class cn.cat.trigger.job.SendMessageTaskJob#exec]
+24-11-24.16:57:15.359 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateSkuStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@33373f70[class cn.cat.trigger.job.UpdateActivitySkuStockJob#exec]
+24-11-24.16:57:15.360 [main            ] INFO  XxlJobExecutor         - >>>>>>>>>>> xxl-job register jobhandler success, name:updateAwardStockHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@56f61d74[class cn.cat.trigger.job.UpdateAwardStockJob#exec]
+24-11-24.16:57:15.671 [main            ] INFO  CachingConnectionFactory - Attempting to connect to: [192.168.136.129:5672]
+24-11-24.16:57:15.734 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9111
+24-11-24.16:57:15.887 [main            ] INFO  CachingConnectionFactory - Created new connection: rabbitConnectionFactory#353b0719:0/SimpleConnection@6a07e6ca [delegate=amqp://cat@192.168.136.129:5672/, localPort= 53991]
+24-11-24.16:57:16.035 [main            ] INFO  RaffleActivityControllerTest - Started RaffleActivityControllerTest in 11.11 seconds (JVM running for 11.911)
+24-11-24.16:57:16.399 [main            ] INFO  RaffleActivityController - 活动抽奖 userId:cat activityId:100301
+24-11-24.16:57:16.539 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.16:57:16.818 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.16:57:16.888 [main            ] INFO  RaffleActivityController - 活动抽奖，创建订单 userId:cat activityId:100301 orderId:550212503943
+24-11-24.16:57:16.908 [main            ] INFO  DefaultLogicChain      - 抽奖责任链-默认处理 userId: cat strategyId: 100006 ruleModel: rule_default awardId: 108
+24-11-24.16:57:16.908 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-责任链 cat 100006 108 rule_default
+24-11-24.16:57:16.909 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Starting...
+24-11-24.16:57:16.951 [main            ] INFO  HikariDataSource       - Retail_HikariCP - Start completed.
+24-11-24.16:57:16.999 [main            ] INFO  RuleLockLogicTreeNode  - 规则过滤-次数锁 userId:cat strategyId:100006 awardId:108
+24-11-24.16:57:17.007 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock_2 node:rule_lock code:0000
+24-11-24.16:57:17.008 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减 userId:cat strategyId:100006 awardId:108
+24-11-24.16:57:17.019 [main            ] INFO  RuleStockLogicTreeNode - 规则过滤-库存扣减-成功 userId:cat strategyId:100006 awardId:108
+24-11-24.16:57:17.089 [main            ] INFO  DecisionTreeEngine     - 决策树引擎【规则树】treeId:tree_lock_2 node:rule_stock code:0001
+24-11-24.16:57:17.089 [main            ] INFO  AbstractRaffleStrategy - 抽奖策略计算-规则树 cat 100006 108 null
+24-11-24.16:57:17.502 [main            ] INFO  EventPublisher         - 发送MQ消息 topic:send_award message:{"data":{"awardId":108,"awardTitle":"1等奖","userId":"cat"},"id":"17631387416","timestamp":1732438637117}
+24-11-24.16:57:17.522 [main            ] INFO  RaffleActivityControllerTest - 请求参数：{"activityId":100301,"userId":"cat"}
+24-11-24.16:57:17.529 [main            ] INFO  RaffleActivityControllerTest - 测试结果：{"code":"0000","data":{"awardId":108,"awardIndex":8,"awardTitle":"1等奖"},"info":"调用成功"}
+24-11-24.16:57:17.545 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-1] INFO  SendAwardCustomer      - 监听用户奖品发送消息 topic: send_award message: {"data":{"awardId":108,"awardTitle":"1等奖","userId":"cat"},"id":"17631387416","timestamp":1732438637117}
+24-11-24.16:57:17.555 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.16:57:17.557 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Waiting for workers to finish.
+24-11-24.16:57:18.028 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.16:57:18.553 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#1-2] INFO  SimpleMessageListenerContainer - Successfully waited for workers to finish.
+24-11-24.16:57:18.589 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.16:57:18.590 [SpringApplicationShutdownHook] INFO  SimpleMessageListenerContainer - Shutdown ignored - container is already stopped
+24-11-24.16:57:18.592 [Thread-8        ] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server stop.
+24-11-24.16:57:18.599 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='big-market-app', registryValue='http://192.168.136.1:9111/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+24-11-24.16:57:18.599 [xxl-job, executor ExecutorRegistryThread] INFO  ExecutorRegistryThread - >>>>>>>>>>> xxl-job, executor registry thread destroy.
+24-11-24.16:57:18.600 [SpringApplicationShutdownHook] INFO  EmbedServer            - >>>>>>>>>>> xxl-job remoting server destroy success.
+24-11-24.16:57:18.600 [xxl-job, executor JobLogFileCleanThread] INFO  JobLogFileCleanThread  - >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destroy.
+24-11-24.16:57:18.601 [xxl-job, executor TriggerCallbackThread] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor callback thread destroy.
+24-11-24.16:57:18.601 [Thread-7        ] INFO  TriggerCallbackThread  - >>>>>>>>>>> xxl-job, executor retry callback thread destroy.
