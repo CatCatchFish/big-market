@@ -61,7 +61,7 @@ public class ZookeeperTest {
      */
     @Test
     public void deleteData() throws Exception {
-        String path = "/big-market-dcc/config/downgradeSwitch";
+        String path = "/big-market-dcc/config/degradeSwitch";
         curatorFramework.delete().deletingChildrenIfNeeded().forPath(path);
     }
 

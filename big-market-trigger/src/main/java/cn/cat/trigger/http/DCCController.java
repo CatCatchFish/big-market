@@ -22,6 +22,12 @@ public class DCCController implements IDCCService {
     private static final String BASE_CONFIG_PATH = "/big-market-dcc";
     private static final String BASE_CONFIG_PATH_CONFIG = BASE_CONFIG_PATH + "/config";
 
+    /**
+     * 更新配置
+     * <p>
+     * curl --request GET --url 'http://localhost:8091/api/v1/raffle/dcc/update_config?key=degradeSwitch&value=open'
+     * curl --request GET --url 'http://localhost:8091/api/v1/raffle/dcc/update_config?key=rateLimiterSwitch&value=open'
+     */
     @RequestMapping(value = "update_config", method = RequestMethod.GET)
     @Override
     public Response<Boolean> updateConfig(@RequestParam String key, @RequestParam String value) {
